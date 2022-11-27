@@ -1,0 +1,27 @@
+head
+  meta(charset='utf-8')
+  title Login Page
+  link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css')
+
+  body
+    .modal-dialog
+        .modal-content
+          // Modal Header
+          .modal-header   
+            h4#myModalLabel.modal-title
+              center 
+                  | Register
+          // Modal Body
+          .modal-body
+            form(role='form' method='POST' action='/sign-up')
+              div.form-group
+                label(for='name') Username:
+                input#name.form-control(type='text', placeholder='username' name='username')
+              div.form-group
+                label(for='email') Email:
+                input#email.form-control(type='email', placeholder='name@email.com' name='email')
+              div.form-group
+                label(for='password') Password:
+                input#password.form-control(type='password', placeholder='*********' name='password')  
+              center
+                  button.btn.btn-primary(type="submit", name="asdf") Submit

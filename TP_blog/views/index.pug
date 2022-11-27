@@ -1,0 +1,38 @@
+<!-- Liste de tous les posts -->
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Notre Blog 
+  link(href='//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css' rel='stylesheet')
+  link(rel='stylesheet' href='css/style.css')
+header Notre Blog
+.blank  
+.add
+  a(href='blogs/create')
+    i.icon-plus-sign
+.home
+  a(href='/blogs')
+    i.icon-home
+
+each val in posts
+    section
+        .titre
+            | #{val.titre}
+            .cmd
+            a(href='blogs/editpost/'+val.id)
+                i.icon-edit  
+            a(href="blogs/delete/"+val.id)    
+                i.icon-trash
+        .auteur Auteur: #{val.auteur} 
+        .date
+            | date de creation: #{val.createdAt}
+        .date
+            | date de Modification: #{val.updatedAt}
+        .resume
+            p R&eacute;sum&eacute;
+            span
+            | #{val.resume}
+            a(href='blogs/details/'+val.id) Lire plus
+            

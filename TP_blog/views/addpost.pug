@@ -1,0 +1,27 @@
+<!-- formulaire pour créer un post -->
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Notre Blog 
+  link(href='//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css' rel='stylesheet')
+  link(rel='stylesheet' href='/css/style.css')
+header Notre Blog
+.blank  
+.home
+  a(href='/blogs')
+    i.icon-home
+
+section
+  p Nouvau post
+  form(action='/blogs/create' method='POST')
+    label Titre
+    input(type='text' name='titre' placeholder='Titre' value='')
+    label Auteur
+    input(type='text' name='auteur' placeholder='Auteur' value='')
+    label R&eacute;sum&eacute;
+    textarea(name='resume' rows='2')
+    label Contenu du Blog 
+    textarea(name='body' rows='12')
+    input(type='submit' value='Add Post')
